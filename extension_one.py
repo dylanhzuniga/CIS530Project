@@ -26,6 +26,9 @@ def setup_models():
   clfs.append(AdaBoostClassifier(DecisionTreeClassifier(max_depth=1),
                                 algorithm="SAMME",
                                 n_estimators=200))
+  clfs.append(AdaBoostClassifier(DecisionTreeClassifier(max_depth=5),
+                                  algorithm="SAMME",
+                                  n_estimators=200))
   clfs.append(MLPClassifier(solver='lbfgs'))
   clfs.append(MLPClassifier(solver='sgd', learning_rate='constant'))
   clfs.append(MLPClassifier(solver='sgd', learning_rate='adaptive'))
@@ -44,7 +47,6 @@ def predict(clfs, X):
   for clf in clfs:
     labels.append(clf.predict(X))
   labels = np.matrix(labels)
-  print(labels)
   probs = np.asarray(np.mean(labels, axis=0))
   return np.asarray(probs >= 0.5), probs
 
