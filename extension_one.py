@@ -26,6 +26,9 @@ def setup_models():
   clfs.append(AdaBoostClassifier(DecisionTreeClassifier(max_depth=1),
                                 algorithm="SAMME",
                                 n_estimators=200))
+  clfs.append(AdaBoostClassifier(DecisionTreeClassifier(max_depth=5),
+                                  algorithm="SAMME",
+                                  n_estimators=200))
   clfs.append(MLPClassifier(solver='lbfgs'))
   clfs.append(MLPClassifier(solver='sgd', learning_rate='constant'))
   clfs.append(MLPClassifier(solver='sgd', learning_rate='adaptive'))
