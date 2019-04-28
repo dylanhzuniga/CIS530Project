@@ -194,7 +194,12 @@ def readInData(filename):
                 
     return data, trends
 
-features_names = ['precision1stem', 'recall1stem', 'f1stem', 'precision2stem', 'recall2stem','f2stem', 'precision3stem', 'recall3stem', 'f3stem']
+features_names = ['precision1gram', 'recall1gram', 'f1gram', 
+'precision2gram', 'recall2gram', 'f2gram', 
+'precision3gram', 'recall3gram', 'f3gram',
+'precision1stem', 'recall1stem', 'f1stem', 
+'precision2stem', 'recall2stem', 'f2stem', 
+'precision3stem', 'recall3stem', 'f3stem']
 
 # reads data and return feature vector
 def readInDataFeatureVector(filename):

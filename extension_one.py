@@ -47,7 +47,6 @@ def predict(clfs, X):
   for clf in clfs:
     labels.append(clf.predict(X))
   labels = np.matrix(labels)
-  print(labels)
   probs = np.asarray(np.mean(labels, axis=0))
   return np.asarray(probs >= 0.5), probs
 
