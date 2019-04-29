@@ -1,9 +1,7 @@
-
-
 if __name__ == "__main__":
     trainfilename = "data/train.data"
     testfilename = "data/test.data"
-    outfilename = "outputs/simple-majority-baseline-output.txt"
+    outfilename = "outputs/simple-majority-baseline.output"
 
     ntline = 0
     true_count = 0
