@@ -25,6 +25,10 @@ To run the script, make sure that the data is in the correct data folder in the 
 
 	python baseline.py
 
-The scores for the baseline from test data is:  F1 - 0.546, Precision - 0.643, Recall - 0.474
+The scores for the baseline from dev data is:  F1 - 0.489, Precision - 0.692, Recall - 0.378. The scores for the baseline from test data is:  F1 - 0.546, Precision - 0.643, Recall - 0.474. 
 
-The scores for the baseline from dev data is:  F1 - 0.489, Precision - 0.692, Recall - 0.378
+# Extension Two #
+We implemented an ensemble of various classifiers. Each classifier gives a binary ouput, and we take the mean of
+all the outputs. If the mean was above a certain threshold, we output a positive label. Otherwise, we hace a negative.
+
+For the development of this extension, we used the 18 published baseline features. The scores for the baseline from dev data is:  F1 - 0.505, Precision - 0.765, Recall - 0.377. The scores for the baseline from test data is:  F1 - 0.603, Precision - 0.708, Recall - 0.526.
