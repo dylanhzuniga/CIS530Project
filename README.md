@@ -32,3 +32,16 @@ We implemented an ensemble of various classifiers. Each classifier gives a binar
 all the outputs. If the mean was above a certain threshold, we output a positive label. Otherwise, we hace a negative.
 
 For the development of this extension, we used the 18 published baseline features. The scores for the baseline from dev data is:  F1 - 0.505, Precision - 0.765, Recall - 0.377. The scores for the baseline from test data is:  F1 - 0.603, Precision - 0.708, Recall - 0.526.
+
+# Extension Three #
+We implemented a simple feed forward neural network as our third extension. The architecture is summarized below
+in the table.
+
+*Architecture of Neural Network*
+
+| Layer       			| Hyperparameters                								 |
+| ----------------- | ---------------------------------------------- |
+| Fully Connected 1 | Out channels = 3000. ReLu activation functions |
+| Fully Connected 2 | Out channels = 2.                              |
+
+For the development of this extension, we used the 18 published baseline features. The scores for the baseline from dev data is:  F1 - 0.519, Precision - 0.755, Recall - 0.396. The scores for the baseline from test data is:  F1 - 0.615, Precision - 0.701, Recall - 0.549.
