@@ -27,11 +27,16 @@ To run the script, make sure that the data is in the correct data folder in the 
 
 The scores for the baseline from dev data is:  F1 - 0.489, Precision - 0.692, Recall - 0.378. The scores for the baseline from test data is:  F1 - 0.546, Precision - 0.643, Recall - 0.474. 
 
+#	Extension One #
+For our first extension, we engineered new features and ran feature ablation. The table of the various features, and their metric scores can be found in the presentation (page 9).
+
 # Extension Two #
 We implemented an ensemble of various classifiers. Each classifier gives a binary ouput, and we take the mean of
 all the outputs. If the mean was above a certain threshold, we output a positive label. Otherwise, we hace a negative.
 
-For the development of this extension, we used the 18 published baseline features. The scores for the baseline from dev data is:  F1 - 0.505, Precision - 0.765, Recall - 0.377. The scores for the baseline from test data is:  F1 - 0.603, Precision - 0.708, Recall - 0.526.
+For the development of this extension, we used the 18 published baseline features. The scores for this model from dev data is:  F1 - 0.505, Precision - 0.765, Recall - 0.377. The scores for this model from test data is:  F1 - 0.603, Precision - 0.708, Recall - 0.526.
+
+After completing extension one, we decided that the best features to use is the stem ones. We used this for this model. The scores for this model from dev data is:  F1 - 0.516, Precision - 0.757, Recall - 0.392. The scores for this model from test data is:  F1 - 0.617, Precision - 0.706, Recall - 0.549. As its evident, we improved F1 and recall using these features.
 
 # Extension Three #
 We implemented a simple feed forward neural network as our third extension. The architecture is summarized below
@@ -44,4 +49,6 @@ in the table.
 | Fully Connected 1 | Out channels = 3000. ReLu activation functions |
 | Fully Connected 2 | Out channels = 2.                              |
 
-For the development of this extension, we used the 18 published baseline features. The scores for the baseline from dev data is:  F1 - 0.519, Precision - 0.755, Recall - 0.396. The scores for the baseline from test data is:  F1 - 0.615, Precision - 0.701, Recall - 0.549.
+For the development of this extension, we used the 18 published baseline features. The scores for this model from dev data is:  F1 - 0.519, Precision - 0.755, Recall - 0.396. The scores for this model from test data is:  F1 - 0.615, Precision - 0.701, Recall - 0.549.
+
+After completing extension one, we decided that the best features to use is the stem ones. We used this for this model. The scores for this model from dev data is:  F1 - 0.521, Precision - 0.748, Recall - 0.400. The scores for this model from test data is:  F1 - 0.623, Precision - 0.692, Recall - 0.566. These new features improved the F1 and recall scores.

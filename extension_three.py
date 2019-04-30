@@ -5,7 +5,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 from torch.autograd import Variable
-from features import readInDataFeatureVector
+# from features import readInDataFeatureVector
+from extension_one import readInDataFeatureVector
 
 NUM_EPOCHS = 40
 LEARNING_RATE = 0.001
